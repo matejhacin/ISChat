@@ -1,4 +1,4 @@
-package com.matejhacin.ispogovor;
+package com.matejhacin.ispogovor.objects;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;

@@ -1,4 +1,4 @@
-package com.matejhacin.ispogovor;
+package com.matejhacin.ispogovor.helpers;
 
 import android.content.Context;
 import android.content.SharedPreferences;

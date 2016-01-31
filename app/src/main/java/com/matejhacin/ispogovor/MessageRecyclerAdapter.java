@@ -5,6 +5,11 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.ViewGroup;
 
+import com.matejhacin.ispogovor.helpers.LoginManager;
+import com.matejhacin.ispogovor.helpers.RestClient;
+import com.matejhacin.ispogovor.objects.Image;
+import com.matejhacin.ispogovor.objects.Message;
+
 import java.util.ArrayList;
 
 /**
@@ -50,9 +55,22 @@ public class MessageRecyclerAdapter extends RecyclerView.Adapter<MessageViewHold
     }
 
     @Override
-    public void onBindViewHolder(MessageViewHolder holder, int position) {
+    public void onBindViewHolder(final MessageViewHolder holder, int position) {
         holder.nameTextView.setText(messageList.get(position).getUsername());
         holder.contentTextView.setText(messageList.get(position).getText());
+
+        // Download profile image
+        RestClient.getInstance().getImage(messageList.get(position).getUsername(), new RestClient.ImageListener() {
+            @Override
+            public void onSuccess(Image image) {
+                holder.profileCircleImageView.setImageBitmap(image.getBitmap());
+            }
+
+            @Override
+            public void onFailure() {
+                // Nothing, keep showing placeholder image
+            }
+        });
     }
 
     /*

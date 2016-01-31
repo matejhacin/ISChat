@@ -19,6 +19,11 @@ android {
     }
 }
 
+repositories {
+    maven { url "http://dl.bintray.com/tbruyelle/tbruyelle" }
+    maven { url "https://jitpack.io" }
+}
+
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     testCompile 'junit:junit:4.12'
@@ -27,4 +32,11 @@ dependencies {
     compile 'com.google.code.gson:gson:2.5'
     compile 'com.jakewharton:butterknife:7.0.1'
     compile 'com.android.support:recyclerview-v7:23.1.1'
+    compile 'com.dlazaro66.qrcodereaderview:qrcodereaderview:1.0.0'
+    compile 'com.tbruyelle.rxpermissions:rxpermissions:0.4.4@aar'
+    compile 'io.reactivex:rxjava:1.0.14'
+    compile 'com.android.support:design:23.1.1'
+    compile 'de.hdodenhof:circleimageview:2.0.0'
+    compile 'com.cocosw:bottomsheet:1.+@aar'
+    compile 'com.github.jkwiecien:EasyImage:1.1.3'
 }

@@ -12,6 +12,7 @@
         android:id="@+id/usernameEditText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:singleLine="true"
         android:hint="Username"/>
 
     <EditText
@@ -19,6 +20,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
+        android:singleLine="true"
         android:hint="Firstname"/>
 
     <EditText
@@ -26,6 +28,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
+        android:singleLine="true"
         android:hint="Lastname"/>
 
     <EditText
@@ -34,6 +37,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:inputType="textPassword"
+        android:singleLine="true"
         android:hint="Password"/>
 
     <Button

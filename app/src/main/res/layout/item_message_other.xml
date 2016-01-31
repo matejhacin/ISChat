@@ -7,18 +7,34 @@
     android:layout_marginTop="5dp"
     android:layout_marginBottom="5dp">
 
-    <TextView
-        android:id="@+id/nameTextView"
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="12sp"
-        android:textColor="#c0c0c0"
-        tools:text="Someone"/>
+        android:orientation="horizontal">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/profileCircleImageView"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/icon_profile_placeholder"/>
+
+        <TextView
+            android:id="@+id/nameTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:textSize="12sp"
+            android:textColor="#c0c0c0"
+            tools:text="Someone"/>
+
+    </LinearLayout>
 
     <TextView
         android:id="@+id/contentTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
         android:textColor="#000000"
         tools:text="Bla bla bla bla bla bla bla bla bla"/>
 
